@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html layout:decorate="~{layout/default}">
+<head>
+    <title>Search Auto Complete with Spring MVC</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen"
+          href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.css"/>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#productName').autocomplete({
+                source: '${pageContext.request.contextPath }/product/search'
+            });
+        });
+    </script>
+</head>
+<body>
+Search Product
+<input type="text" id="productName">
+</body>
+</html>
+
