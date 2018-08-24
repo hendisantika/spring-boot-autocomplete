@@ -2,7 +2,11 @@
 <html layout:decorate="~{layout/default}">
 <head>
     <title>Search Auto Complete with Spring MVC</title>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
+    <script
+            src="https://code.jquery.com/jquery-1.12.4.js"
+            integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="
+            crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js"></script>
     <link rel="stylesheet" type="text/css" media="screen"
           href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.css"/>
@@ -10,7 +14,7 @@
     <script type="text/javascript">
         $(document).ready(function () {
             $('#productName').autocomplete({
-                source: '${pageContext.request.contextPath }/product/search'
+                source: 'http://localhost:8080/product/search'
             });
         });
     </script>
